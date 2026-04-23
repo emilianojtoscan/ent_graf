@@ -1,0 +1,43 @@
+3.a
+    <a href="http://www.google.com.ar">Click aquí para ir a Google</a> 
+        Efecto: Enlace normal, abre Google en la misma pestaña
+        Visual: Texto clickeable estándar
+
+    <a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a> 
+        Efecto: Enlace normal, abre Google en otra pestaña
+        Visual: Texto clickeable estándar
+
+    <a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help"> 
+        Efecto: Enlace normal, abre Google en la misma pestaña
+        Visual: Texto clickeable (falta contenido)
+
+    <a href="#">Click aquí para ir a Google</a> 
+        Efecto: Recarga la pagina
+        Visual: Texto clickeable estándar
+
+    <a href="#arriba">Click aquí para volver arriba</a> 
+        Efecto: Desplaza la página hacia un elemento con id "arriba"
+        Visual: Texto clickeable estándar
+
+    <a name="arriba" id="arriba"></a> 
+        Efecto: Define el punto de destino del enlace anterior
+        Visual: No se ve nada
+
+
+
+3.b
+    <p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p> 
+        Efecto: Una imagen, y un link
+        Visual: Imagen + texto linkeado separado
+
+    <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p> 
+        Efecto: Una imagen que es un link, y un texto que no es link
+        Visual: Imagen clickeable + texto normal al lado
+
+    <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p> 
+        Efecto: Una imagen y un texto, ambos son links
+        Visual: Imagen + texto como un solo link
+
+    <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>
+        Efecto: Dos links distintos, uno en la imagen y otro en el texto
+        Visual: Imagen clickeable + texto clickeable separados
