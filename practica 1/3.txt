@@ -41,3 +41,290 @@
     <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>
         Efecto: Dos links distintos, uno en la imagen y otro en el texto
         Visual: Imagen clickeable + texto clickeable separados
+
+
+3.c
+    1.
+        <ul>   
+            <li>xxx</li> 
+            <li>yyy</li> 
+            <li>zzz</li> 
+        </ul>
+        Efecto: Lista no ordenada
+        Visual: • xxx
+                • yyy
+                • zzz
+    2.
+        <ol> 
+            <li>xxx</li> 
+            <li>yyy</li> 
+            <li>zzz</li> 
+        </ol> 
+        Efecto: Lista ordenada
+        Visual: 1.xxx
+                2.yyy
+                3.zzz
+    3.
+        <ol> 
+            <li>xxx</li> 
+        </ol> 
+        <ol> 
+            <li value="2">yyy</li> 
+        </ol> 
+        <ol>            
+            <li value="3">zzz</li> 
+        </ol> 
+        Efecto: 3 listas distintas ordenadas de forma forzada con "value"
+        Visual: 1.xxx
+                2.yyy
+                3.zzz
+    4.
+        <blockquote> 
+            <p>1. xxx<br /> 
+            2. yyy<br /> 
+            3. zzz</p> 
+        </blockquote> 
+        Efecto: Es un bloque de texto(solo aparenta ser una lista)
+        Visual: 1.xxx
+                2.yyy
+                3.zzz
+
+3.d
+    1.
+        <table border="1" width="300"> 
+        <tr> 
+        <th>Columna 1</th> 
+        <th>Columna 2</th> 
+        </tr> 
+        <tr> 
+        <td>Celda 1</td> 
+        <td>Celda 2</td> 
+        </tr> 
+        <tr> 
+        <td>Celda 3</td> 
+        <td>Celda 4</td> 
+        </tr> 
+        </table>
+    2.
+        <table border="1" width="300"> 
+        <tr> 
+        <td><div align="center"><strong>Colum 
+        na1</strong></div></td> 
+        <td><div align="center"><strong>Columna 
+        2</strong></div></td> 
+        </tr> 
+        <tr> 
+        <td>Celda 1</td> 
+        <td>Celda 2</td> 
+        </tr> 
+        <tr> 
+        <td>Celda 3</td> 
+        <td>Celda 4</td> 
+        </tr> 
+        </table> 
+
+    Diferencias: El primero usa encabezados reales con <th>, y el segundo usa celdas normales con <td>, las pone en negrita con <strong> y las centra con align="center"
+    visual: Visualmente se ven iguales pero el segundo esta echo de forma forzada
+
+3.e
+    1.
+        <table width="200"> 
+        <caption> 
+        Título 
+        </caption> 
+        <tr> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        </tr> 
+        <tr> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd"> 
+        &nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        </tr>   
+        </table> 
+        Efecto: El titulo pertenece a la tabla como etiqueta semantica
+        Visual: Texto centrado arriba y separado de las celdas
+    2.
+        <table width="200"> 
+        <tr>
+        <td colspan="3"><div 
+        align="center">Título</div></td> 
+        </tr> 
+        <tr> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        </tr> 
+        <tr> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        </tr> 
+        </table> 
+        Efecto: El texto esta dentro de la tabla como una fila mas
+        Visual: El titulo aparece dentro de la tabla ocupando toda la fila superior
+
+3.f
+    1.
+        <table width="200"> 
+        <tr> 
+        <td colspan="3"><div 
+        align="center">Título</div></td> 
+        </tr> 
+        <tr> 
+        <td rowspan="2" bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        </tr> 
+        <tr> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        </tr> 
+        </table> 
+        Efecto: La primera celda ocupa dos filas, se fuciona verticalmente
+        Visual: Celda alta
+    2.
+        <table width="200"> 
+        <tr> 
+        <td colspan="3"><div 
+        align="center">Título</div></td> 
+        </tr> 
+        <tr> 
+        <td colspan="2" 
+        bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        </tr> 
+        <tr> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        </tr> 
+        </table> 
+        Efecto: La primera celda ocupa del columnas, se fusiona horizontalmente
+        Visual: Celda ancha
+
+3.g 
+    1.
+        <table width="200" border="1"> 
+        <tr> 
+        <td colspan="3"><div 
+        align="center">Título</div></td> 
+        </tr> 
+        <tr> 
+        <td colspan="2"rowspan="2">&nbsp;</td> 
+        <td>&nbsp;</td> 
+        </tr> 
+        <tr> 
+        <td width="50%">&nbsp;</td> 
+        </tr> 
+        </table> 
+        Efecto: Tabla con titulo que ocupa 3 columnas, una celda grande de 2x2
+        Visual: Celda grande a la izquierda y la columna derecha dividida en 2
+    2.
+        <table width="200" border="1" cellpadding="0" 
+        cellspacing="0"> 
+        <tr> 
+        <td colspan="2"><div 
+        align="center">Título</div></td> 
+        </tr> 
+        <tr> 
+        <td rowspan="2">&nbsp;</td> 
+        <td>&nbsp;</td> 
+        </tr> 
+        <tr> 
+        <td width="50%">&nbsp;</td> 
+        </tr> 
+        </table> 
+        Efecto: Tabla con titulo de lo 2 columnas, una celda que ocupa 2 columnas, cellpadding="0" y cellspacing="0" eliminan el espacio interno y entre celdas
+        Visual: Celda vertical a la izquierda, y sin espacio entre bordes
+
+3.h
+    1.        
+        <form id="form1" name="form1" action="procesar.php" method="post" target="_blank"> 
+        <fieldset> 
+        <legend>LOGIN</legend> 
+        Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br /> 
+        Clave: <input type="password" id="clave1" name="clave1" value="xxx" /> 
+        </fieldset> 
+        <input type="submit" id="boton1" name="boton1" value="Enviar" /> 
+        </form> 
+        Efecto: Envia datos a procesar.php con metodo POST, abre en otra pestaña por target="_blank" y sus campos son usuario(texto) t clave(password)
+        Visual: Formulario con borde (fieldset), inputs con valores precargados "xxx", la contraseña se oculta
+    2.
+        <form id="form2" name="form2" action="" method="get" target="_blank"> 
+        LOGIN<br /> 
+        <label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br /> 
+        <label>Clave: <input type="text" id="clave2" name="clave2" /></label><br /> 
+        <input type="submit" id="boton2" name="boton2" value="Enviar" /> 
+        </form> 
+        Efecto: Envia los datos a la misma pagina con metodo GET, en otra pestaña y la clave es tipo (text)
+        Visual: Formulario sin borde (fieldset), inputs sin valores precargados, la contraseña no se oculta
+    3.
+        <form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="p 
+        ost" target="_blank"> 
+        <fieldset> 
+        <legend>LOGIN</legend> 
+        Usuario: <input type="text" id="usu3" name="usu3" /><br /> 
+        Clave: <input type="password" id="clave3" name="clave3" /> 
+        </fieldset> 
+        <input type="reset" id="boton3" name="boton3" value= 
+        "Enviar" /> 
+        </form> 
+        Efecto: Intenta enviar por mail con action="mailto:xx@xx.com" con metodo POST y enctype=text/plain, usa boton reset por lo que no se envia, sino que se borra
+        Visual: Igual al primero (El boton dice enviar pero no envia nada)
+3.i 
+    1. 
+        <label>Botón 1 
+        <button type="button" name="boton1" id="boton1"> 
+        <img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br /> 
+        <b>CLICK AQUÍ</b></button></label> 
+        Efecto: Boton con contenido HTML (imagen y texto)
+        Visual: Imagen arriba y texto abajo
+    2.
+        <label>Botón 2 
+        <input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" /> 
+        </label> 
+        Efecto: Boton simple
+        Visual: Boton basico, solo texto
+
+3.j 
+    1.
+        <p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br /> 
+        <label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p> 
+        Efecto: Dos radios con el mismo name, solo se puede seleccionar una opcion
+        Visual: Dos opciones, cuando marcas una, la otra se desmarca
+    2.
+        <p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br /> 
+        <label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p> 
+        Efecto: Dos radios con distinto name, son idependientes, se pueden seleccionar ambos a la vez
+        Visual: Dos opciones, podes marcar ambas a la vez
+
+3.k
+    1.
+        <select name="lista"> 
+        <optgroup label="Caso 1"> 
+        <option>Mayo</option> 
+        <option>Junio</option> 
+        </optgroup> 
+        <optgroup label="Caso 2"> 
+        <option>Mayo</option> 
+        <option>Junio</option> 
+        </optgroup> 
+        </select>
+        Efecto: Lista desplegable, solo permite una seleccion, agrupa opciones con optgroup
+        Visual: Lista desplegable, se abre al hacer click
+    2.
+        <select name="lista[]" multiple="multiple"> 
+        <optgroup label=" Caso 1"> 
+        <option>Mayo</option> 
+        <option>Junio</option> 
+        </optgroup> 
+        <optgroup label=" Caso 2"> 
+        <option>Mayo</option> 
+        <option>Junio</option> 
+        </optgroup> 
+        </select> 
+        Efecto: Permite seleccion multiple
+        Visual: Lista visible(no desplegable), se pueden seleccionar varias
