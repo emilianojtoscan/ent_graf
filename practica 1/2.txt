@@ -1,0 +1,43 @@
+2_a(<!-- Código controlado el día 12/08/2009 -->):
+    Ubicacion: Puede ir en cualquier parte del documento
+    Efecto: Es un comentario (no produce efecto)
+    Elementos: Comentario HTML
+    Etiquetas:Usa delimitadores (inicio:<!-- ),(fin:-->)
+    Atributos: No tiene atributos
+
+2_b(<div id="bloque1">Contenido del bloque1</div>):
+    Ubicacion: Dentro del <body>
+    Efecto: Crea un bloque contenedor y permite agrupar contenido
+    Elementos: <div>
+    Etiquetas: Apertura:(<div>) Cierre(</div>)
+    Atributos:  id(Valor:"bloque1"; No obligatorio)
+
+2_c(<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />):
+    Ubicacion: Dentro del <body>
+    Efecto: Colocar una imagen
+    Elementos:<img>
+    Etiquetas: Apertura: (<img ... />)
+    Atributos: src(Valor:""; obligatorio); alt (Valor:"lugar imagen"; obligatorio); id (Valor:"im1"; no obligatorio); name (Valor:"im1"; no obligatorio); width (Valor:"32"; no obligatorio) height (Valor:"32"; no obligatorio); longdesc (Valor:"detalles.htm"; no obligatorio)
+
+2_d(<meta name="keywords" lang="es" content="casa, compra, venta, alquiler" />
+    <meta http-equiv="expires" content="16-Sep-2019 7:49">):
+    Ubicacion: Dentro del <head>
+    Efecto: Define metadatos, el primero define palabras claves y el segundo indica cuando expira la pagina
+    Elementos: <meta>
+    Etiquetas: Apertura: (<meta ... />)
+    Atributos: name (Valor:"keywoords"; no obligatorio); lang (Valor:"es"; no obligatorio); content (Valor:"casa,compra, venta, alquiler"; obligatorio); http-equiv (Valor:"expires"; no obligatorio); content (Valor:"fecha"; obligatorio)
+
+2_e(<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8" 
+    rel="help">Resumen HTML </a> ):
+    Ubicacion: Dentro del <body>
+    Efecto: Crea un enlace
+    Elementos: <a>
+    Etiquetas: Apertura: (<a>) Cierre: (</a>)
+    Atributos: href (Valor:"url"; obligatorio); type (Valor:"text/html"; no obligatorio); hreflang (Valor:"es"; no obligatorio); charset (Valor:"ult-8"; no obligatorio); rel (Valor:"help"; no obligatorio);
+
+2_f(<!-- Código controlado el día 12/08/2009 -->):
+    Ubicacion: Dentro del body
+    Efecto: Crea una tabla
+    Elementos: <table>; <caption>; <tr>; <th>; <td>; &nbsp;
+    Etiquetas:<table>;<caption>;<tr>;<th>;<td>
+    Atributos: width (Valor:"200"; no obligatorio); summary (Valor:"texto"; no obligatorio); aling (Valor:"top"; no obligatorio); scope (Valor:col/row"; no obligatorio)
