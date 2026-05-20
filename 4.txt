@@ -1,0 +1,116 @@
+Dadas las siguientes declaraciones: 
+    * {color:green; } 
+    a:link {color:gray } 
+    a:visited{color:blue } 
+    a:hover {color:fuchsia } 
+    a:active {color:red } 
+    p {font-family: arial,helvetica;font-size: 10px;color:black; } 
+    .contenido{font-size: 14px;font-weight: bold; }
+
+
+Analizar los siguientes códigos y comparar sus efectos.
+    1.
+        <body> 
+        <p class="contenido" style="font-weight: normal;"> 
+        Este es un texto ...............</p> 
+        <table> 
+        <tr> 
+        <td>Y esta es una tabla.......</td> 
+        </tr> 
+        <tr> 
+        <td><a href="http://www.google.com.ar">con un 
+        enlace</a></td> 
+        </tr> 
+        </table> 
+        </body>
+
+        Analisis linea por linea:
+            1.  <p class="contenido" style="font-weight: normal;"> 
+                Este es un texto ...............</p> 
+                Reglas aplicadas:
+                    1.* { color: green; }
+                    2.p {font-family: arial,helvetica;font-size: 10px;color:black; } 
+                    3..contenido{font-size: 14px;font-weight: bold; }
+                Resultado:
+                    *color negro (p sobreescribe a *)
+                    *font-family arial o helvetica
+                    *tamaño 14px
+                    *fond-weight normal (style sobreescribe a .contenido)
+            2.  <table> 
+                Reglas aplcadas:
+                    1.* { color: green; }
+                Resultado:
+                    *texto verde
+            3.  <a href="http://www.google.com.ar">con un enlace</a>
+                Reglas aplicadas:
+                    1.* {color:green; } 
+                    2.a:link {color:gray } 
+                    3.a:visited{color:blue } 
+                    4.a:hover {color:fuchsia } 
+                    5.a:active {color:red } 
+                Resultado:
+                    *gris si no fue visitado,
+                    *azul si fue visitado,
+                    *fuchsia al pasar el mouse,
+                    *rojo al hacer clic.
+                    *el verde el sobreescrito por los otros
+
+
+    2.
+        <body class="contenido"> 
+        <p> Este es un texto................</p> 
+        <table> 
+        <tr> 
+        <td>Y esta es una tabla.......</td> 
+        </tr> 
+        <tr> 
+        <td><a href="http://www.google.com.ar">con 
+        un enlace</a></td> 
+        </tr> 
+        </table> 
+        </body>
+
+        Analisis linea por linea:
+            1.  <body class="contenido">
+                Reglas aplcadas:
+                    1. * {color:green; } 
+                    2..contenido{font-size: 14px;font-weight: bold; }
+                Resultado:
+                    *tamaño 14px
+                    *texto en negrita
+                    *color verde
+                    **Algunos elementos heredarán estos resultados
+            2.  <p> Este es un texto................</p> 
+                Reglas aplicadas:
+                    1.* { color: green; }
+                    2.p {font-family: arial,helvetica;font-size: 10px;color:black; } 
+                    3.hereda 14px y texto en negrita
+                Resultado:
+                    *tamaño 10px (p sobreescribe a lo heredado)
+                    *color negro (p sobreescribe a *)
+                    *negrita (heredada del body)
+                    *Arial/Helvetica
+            3.  <table>
+                Reglas aplicadas:
+                    1.hereda 14px y texto en negrita
+                    2.* { color: green; }
+                Resultado:
+                    *texto verde
+                    *tamaño 14px
+                    *Texto en negrita
+            4.  <a href="http://www.google.com.ar">con un enlace</a></td> 
+                Reglas aplicadas:
+                    1.* {color:green; } 
+                    2.a:link {color:gray } 
+                    3.a:visited{color:blue } 
+                    4.a:hover {color:fuchsia } 
+                    5.a:active {color:red } 
+                    6.hereda 14px y texto en negrita
+                Resultado:
+                    *gris si no fue visitado,
+                    *azul si fue visitado,
+                    *fuchsia al pasar el mouse,
+                    *rojo al hacer clic.
+                    *el verde el sobreescrito por los otros
+                    *tamaño 14px
+                    *texto en negrita

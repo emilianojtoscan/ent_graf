@@ -1,0 +1,55 @@
+1. ¿ Qué es CSS y para qué se usa? 
+    CSS (Cascading Style Sheets u “Hojas de Estilo en Cascada”) es un lenguaje de hojas de estilo utilizado para definir la apariencia y el diseño de un documento HTML son presentados al usuario. Este lenguaje  te permite aplicar estilos de manera selectiva a elementos en documentos HTML
+
+
+2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan? 
+    Las reglas CSS están formadas por:
+        Selector: indica qué elemento HTML será modificado.
+        Declaración: define el estilo.
+        Propiedad: característica a cambiar.
+        Valor: configuración aplicada.
+
+3. ¿ Cuáles son las tres formas de dar estilo a un documento? 
+    *directamente a la marca 
+    *en el head de la página  
+    *agrupar las reglas de estilo en un archivo independiente con extensión .css
+
+4. ¿ Cuáles son los distintos tipos de selectores más utilizados?. Ejemplifique cada uno. 
+    *Selector por etiqueta
+        ej:
+            p{
+                color: blue;
+            }
+    *Selector por clase
+        ej:
+            .parrafo{
+                color: blue;
+            }
+    *Selector por id
+        ej:
+            #parrafo{
+                color: blue;
+            }
+    *Selector descendente (Selecciona un elemento dentro de otro)
+        ej:
+            div p{
+                color: blue;
+            }
+
+5. ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos? 
+    Una pseudo-clase permite aplicar estilos a un elemento en un estado específico.
+    Las mas utilizadas aplicadas a vínculos son:
+        1. :hover, Cambia cuando pasa el mouse por encima.
+        2. :visited, Cambia cuando ya visitaste el vinculo.
+        3. :link, vinculo no visitado.
+        4. :active, Cambia cuando se hace click.
+
+6. ¿ Qué es la herencia? 
+    La herencia es el mecanismo por el cual algunos estilos aplicados a un elemento padre se transmiten automáticamente a sus elementos hijos.
+
+7. ¿ En qué consiste el proceso denominado cascada?
+    La cascada es el mecanismo que usa CSS para decidir qué estilo aplicar cuando existen varias reglas para un mismo elemento.
+    CSS evalúa:
+        1.Importancia (!important)
+        2.Especificidad del selector
+        3.Orden de aparición (la última regla prevalece)

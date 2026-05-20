@@ -1,0 +1,48 @@
+Analizar el siguiente código señalando declaraciones y aplicaciones de reglas, y su efecto.
+    1.
+        p#normal { 
+        font-family: arial,helvetica; 
+        font-size: 11px; 
+        font-weight: bold; 
+        } 
+        Declaraciones: 
+            font-family: arial,helvetica; 
+            font-size: 11px; 
+            font-weight: bold;
+        Efecto:
+            los elementos <p> cuyo id sea "normal" tendran:
+                *fuente arial o helvetica
+                *tamaño de fuente de 11 pixeles
+                *texto en negrita
+        Aplicaciones:
+            Se le aplica al parrafo (<p id="normal">Este es un párrafo</p>)
+
+    2.
+        *#destacado { 
+        border-style: solid; 
+        border-color: blue; 
+        border-width: 2px; 
+        } 
+        Declaraciones: 
+            border-style: solid; 
+            border-color: blue; 
+            border-width: 2px; 
+        Efecto:
+            todos los elementos cuyo id sea "destacado" tendran:
+                *agrega un borde solido, azul y de 2 pixeles.
+        Aplicaciones:
+            Se le aplica al parrafo (<p id="destacado">Este es otro párrafo</p>) y al parrafo(<table id="destacado"><tr><td>Esta es una tabla</td></tr></table> )
+
+    3.
+        #distinto { 
+        background-color: #9EC7EB; 
+        color: red; 
+        } 
+        Declaraciones: 
+            background-color: #9EC7EB; 
+            color: red; 
+        Efecto:
+            todos los elementos cuyo id sea "distinto" tendran:
+                *agrega un fondo celeste y vuelve al texto rojo
+        Aplicaciones:
+            Se le aplica al parrafo (<p id="distinto">Este es el último párrafo</p>)
