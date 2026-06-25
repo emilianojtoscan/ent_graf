@@ -1,0 +1,38 @@
+Analizar la siguiente función, y escribir un script para probar su funcionamiento:
+
+    function comprobar_nombre_usuario($nombre_usuario){  
+    //compruebo que el tamaño del string sea válido.  
+    if (strlen($nombre_usuario)<3 || strlen($nombre_usuario)>20){  
+        echo $nombre_usuario . " no es válido<br>";  
+        return false;  
+    }  
+    
+    //compruebo que los caracteres sean los permitidos  
+    $permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+    _";  
+    for ($i=0; $i<strlen($nombre_usuario); $i++){  
+        if (strpos($permitidos, substr($nombre_usuario,$i,1))===false){  
+            echo $nombre_usuario . " no es válido<br>";  
+            return false;  
+        }  
+    }  
+    echo $nombre_usuario . " es válido<br>";  
+    return true;  
+    } 
+
+
+script:
+    comprobar_nombre_usuario("Juan");
+    comprobar_nombre_usuario("ab");
+    comprobar_nombre_usuario("Juan_123");
+    comprobar_nombre_usuario("Juan Perez");
+    comprobar_nombre_usuario("usuario@2025");
+    comprobar_nombre_usuario("Usuario123");
+
+Salida esperada:
+    Juan es válido
+    ab no es válido
+    Juan_123 es válido
+    Juan Perez no es válido
+    usuario@2025 no es válido
+    Usuario123 es válido

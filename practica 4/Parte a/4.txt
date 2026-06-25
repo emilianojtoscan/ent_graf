@@ -1,0 +1,15 @@
+Si el archivo  datos.php contiene el código que sigue: 
+   <?php 
+    $color = 'blanco'; 
+    $flor = 'clavel'; 
+    ?> 
+Indicar las salidas que produce el siguiente código. Justificar.
+    <?php 
+    echo "El $flor $color \n";  
+    include 'datos.php'; 
+    echo " El $flor $color";  
+    ?> 
+
+Salida:     "El"
+            "El clavel blanco"
+Justificacion:  La sentencia include 'datos.php'; incorpora el contenido del archivo en ese punto del programa. Antes del include, las variables $flor y $color no están definidas; después del include, sí existen y pueden utilizarse, por lo que el segundo echo muestra correctamente "El clavel blanco".

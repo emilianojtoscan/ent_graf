@@ -1,0 +1,109 @@
+Indicar si los siguientes códigos son equivalentes.
+
+a_1
+    <?php 
+    $i = 1; 
+    while ($i <= 10) { 
+        print $i++;   
+    } 
+    ?>
+Imprime por pantalla "12345678910"
+
+a_2
+    <?php 
+    $i = 1; 
+    while ($i <= 10): 
+        print $i; 
+        $i++; 
+    endwhile; 
+    ?> 
+Imprime por pantalla "12345678910"
+
+a_3
+    $i = 0;
+    do {
+        print ++$i;
+    } while ($i < 10);
+Imprime por pantalla "12345678910"
+
+Conclucion: Los 3 codigos de a son equivalentes.
+
+
+b_1
+    <?php 
+    for ($i = 1; $i <= 10; $i++) { 
+        print $i; 
+    } 
+    ?> 
+Imprime por pantalla "12345678910"
+
+b_2
+    <?php 
+    for ($i = 1; $i <= 10; print $i, $i++) ; 
+    ?>
+Imprime por pantalla "12345678910"
+
+b_3
+    <?php 
+    for ($i = 1; ;$i++) { 
+        if ($i > 10) { 
+            break; 
+        } 
+        print $i; 
+    } 
+    ?> 
+Imprime por pantalla "12345678910"
+
+b_4
+    <?php 
+    $i = 1; 
+    for (;;) { 
+        if ($i > 10) { 
+            break; 
+        } 
+        print $i; 
+        $i++; 
+    } 
+    ?>
+Imprime por pantalla "12345678910"
+
+Conclucion 2: Los 4 codigos de b son equivalentes.
+Conclucion 3: Los 7 codigos de a y de b son equivalentes.
+
+c_1
+    <?php 
+    … 
+    … 
+    if ($i == 0) { 
+        print "i equals 0"; 
+    } elseif ($i == 1) { 
+        print "i equals 1"; 
+    } elseif ($i == 2) { 
+        print "i equals 2"; 
+    } 
+    ?>
+Imprime por pantalla:   si $i = 0 "i equals 0"
+                        si $i = 1 "i equals 1"
+                        si $i = 2 "i equals 2"
+
+c_2
+    <?php 
+    … 
+    … 
+    switch ($i) { 
+        case 0: 
+            print "i equals 0"; 
+            break; 
+        case 1: 
+            print "i equals 1"; 
+            break; 
+        case 2: 
+            print "i equals 2"; 
+            break; 
+    } 
+    ?>
+Imprime por pantalla:   si $i = 0 "i equals 0"
+                        si $i = 1 "i equals 1"
+                        si $i = 2 "i equals 2"
+
+Conclucion 4: los dos codigos de c son iguales

@@ -1,0 +1,25 @@
+Indicar si los siguientes códigos son equivalentes. 
+
+1-
+    <?php 
+    $a = array( 'color'  => 'rojo', 
+    'sabor'  => 'dulce', 
+    'forma'  => 'redonda', 
+    'nombre' => 'manzana', 
+    4         
+    ); 
+    ?>   
+PHP asigna automáticamente el índice numérico 0 al último elemento, por lo que  0 => 4
+    
+2-
+    <?php 
+    $a['color']  = 'rojo'; 
+    $a['sabor']  = 'dulce'; 
+    $a['forma']  = 'redonda'; 
+    $a['nombre'] = 'manzana'; 
+    $a[]         = 4;
+    ?>   
+$a[] agrega el elemento en el siguiente índice numérico disponible. Como no existen índices numéricos previos entonces utiliza: $a[0] = 4;
+    
+    
+Conclusion: Son equivalentes, porque ambos generan exactamente el mismo array asociativo con las mismas claves y valores.

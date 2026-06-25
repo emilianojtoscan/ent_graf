@@ -1,0 +1,40 @@
+En el siguiente código identificar: 
+• las variables y su tipo 
+• los operadores 
+• las funciones y sus parámetros 
+• las estructuras de control 
+• cuál es la salida por pantalla
+
+Variables y su tipo:
+    $a	boolean
+    $b	string
+    $c	string
+    $d	integer
+    $f	integer
+    $g	integer
+    $i	integer
+
+Operadores:
+    =   asignacion
+    *   multiplicacion
+    +   suma
+    ++  incremento
+    +=  asignacion de la suma
+    ? : operador ternario
+
+Funciones y parametros:
+    function doble($i){return $i*2;}    parametro $i
+Funciones predefinidas:
+    gettype($a)  parametro $a
+    gettype($b)  parametro $b
+    gettype($c)  parametro $c
+    gettype($d)  parametro $d
+    is_int($d)   parametro $d
+    is_string($a)parametro $a
+
+Estructuras de control:
+    if      condicional
+    ? :     operador ternario
+
+Salida por pantalla:
+    booleanstringstringinteger1xyzxyz184444
